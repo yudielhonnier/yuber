@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct YuberApp: App {
+    @StateObject var viewModel = LocationSearchViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environmentObject(viewModel)
         }
     }
 }
